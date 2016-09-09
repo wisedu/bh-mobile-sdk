@@ -1,7 +1,5 @@
-let a = () => {
-  console.log('aaa')
-}
+import init from './init'
 
 export default {
-  a
+  init
 }
