@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": "wisedu mobile web sdk",
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
+    "dev": "webpack-dev-server --config webpack.config.demo.js",
     "test": "make test"
   },
   "repository": {
