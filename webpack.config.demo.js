@@ -20,5 +20,10 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
+  },
+  resolve: {
+    alias: {
+      src: path.resolve(__dirname, './src'),
+    }
   }
 }

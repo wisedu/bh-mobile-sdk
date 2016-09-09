@@ -1,5 +1,3 @@
-let a = () => {
-  console.log('aaa')
-}
+import SDK from 'src/index'
 
-a()
+console.log(SDK)
