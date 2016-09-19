@@ -10,7 +10,10 @@ module.exports = {
     publicPath: '/dist/',
   },
   devServer: {
-    contentBase: './demo'
+    contentBase: './demo',
+    historyApiFallback: true,
+    noInfo: true,
+    host: '0.0.0.0'
   },
   module: {
     loaders: [
