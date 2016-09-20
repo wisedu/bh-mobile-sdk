@@ -1,26 +1,23 @@
-export default () => {
-  function injectScript(url) {
-    var script = document.createElement("script");
-    script.src = url;
-    document.head.appendChild(script);
+let INIT = false
+
+export default (callback) => {
+  if (INIT) {
+    alert('请不要重复初始化')
+    return
   }
 
-  function init(){
+  let distUrl = 'mamp://injectionmamp/cordova.js' // 远端文件地址
 
-    var pathPrefix = "mamp://injectionmamp/";
-    if (pathPrefix === null) {
-      console.log('Could not find mamp.js script tag. Plugin loading may fail.');
-      pathPrefix = '';
-    }
-    injectScript(pathPrefix + 'cordova.js');
-  }
+  var script = document.createElement("script")
+  script.src = distUrl
+  document.head.appendChild(script)
 
-  init();
   window.close = function(){
     window.location.href = 'mamp://close';
-  };
-  window.mamp = {};
-  window.mamp.initEnv = function(callback){
-    document.addEventListener("deviceready", callback, false);
-  };
+  }
+
+  window.mamp = {}
+  document.addEventListener("deviceready", callback, false);
+
+  INIT = true
 }
