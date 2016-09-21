@@ -16,7 +16,6 @@ export default (callback) => {
     window.location.href = 'mamp://close';
   }
 
-  window.mamp = {}
   document.addEventListener("deviceready", callback, false);
 
   INIT = true

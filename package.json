@@ -33,5 +33,8 @@
     "babel-preset-stage-2": "^6.13.0",
     "kanpai": "^0.7.0",
     "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "bh-mint-ui": "0.0.13"
   }
 }

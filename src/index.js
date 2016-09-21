@@ -1,5 +1,10 @@
 import init from './init'
 
-export default {
+let mamp = {}
+
+window.mamp = mamp
+
+export {
+  mamp as MAMP,
   init
 }

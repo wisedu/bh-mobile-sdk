@@ -1,5 +1,12 @@
-import SDK from 'src/index'
+import {init, MAMP} from 'src/index'
 
-SDK.init(() => {
-  alert('init ok')
+let {UI} = MAMP
+
+alert(UI)
+
+init(() => {
+  setTimeout(() => {
+    let {UI} = MAMP
+    console.log(UI.setNavHeader)
+  }, 3000)
 })
