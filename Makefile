@@ -7,6 +7,14 @@ install:
 dev: install
 	npm run dev
 
+dist:
+	npm run dist
+
+deploy:
+	npm run deploy
+
+pub:
+	./node_modules/.bin/kp $(filter-out $@,$(MAKECMDGOALS))
 
 help:
 	@echo "   \033[35mmake\033[0m \033[1m命令使用说明\033[0m"

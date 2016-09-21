@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.demo.js",
     "dist": "rm -rf lib && webpack",
+    "prepublish": "npm run dist",
     "test": "make test"
   },
   "repository": {
@@ -29,6 +30,8 @@
   "devDependencies": {
     "babel-loader": "^6.2.5",
     "babel-preset-es2015": "^6.14.0",
-    "babel-preset-stage-2": "^6.13.0"
+    "babel-preset-stage-2": "^6.13.0",
+    "kanpai": "^0.7.0",
+    "webpack": "^1.13.2"
   }
 }
