@@ -10,8 +10,7 @@
   "scripts": {
     "dev": "webpack-dev-server --config webpack.config.demo.js",
     "dist": "rm -rf lib && webpack",
-    "prepublish": "npm run dist",
-    "test": "make test"
+    "prepublish": "npm run dist"
   },
   "repository": {
     "type": "git",
