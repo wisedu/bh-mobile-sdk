@@ -1,12 +1,8 @@
-import {init, MAMP} from 'src/index'
-
-let {UI} = MAMP
-
-alert(UI)
+import SDK, {init} from 'src/index'
 
 init(() => {
+  let {UI:{setNavHeader}} = SDK()
   setTimeout(() => {
-    let {UI} = MAMP
-    console.log(UI.setNavHeader)
-  }, 3000)
+    console.log(setNavHeader)
+  }, 1000)
 })
