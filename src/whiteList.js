@@ -12,5 +12,8 @@ export default {
   systemAbility: {
     takeCamera: true,
     takePhoto: true
+  },
+  file: {
+    uploadToOSS: true
   }
 }

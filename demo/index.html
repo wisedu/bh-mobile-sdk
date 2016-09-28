@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>SDK demo</title>
-  <script src="http://172.16.120.211:3333/target/target-script-min.js#anonymous"></script>
+  <script src="http://172.20.4.182:3333/target/target-script-min.js#anonymous"></script>
+  <style>
+    body {
+      font-size: 20px;
+    }
+    .item {
+      padding: 10px;
+      margin: 10px;
+    }
+  </style>
 </head>
 <body>
+  <div>
+    <h2>UI</h2>
+    <div>
+      <div id="setNavHeader" class="item">setNavHeader</div>
+      <div id="preViewImages" class="item">preViewImages</div>
+    </div>
+    <h2>systemAbility</h2>
+    <div>
+      <div id="takeCamera" class="item">takeCamera</div>
+      <div id="takePhoto" class="item">takePhoto</div>
+    </div>
+    <h2>file</h2>
+    <div>
+      <div id="uploadToOSS" class="item">uploadToOSS</div>
+    </div>
+  </div>
   <script src="/dist/dist.js"></script>
 </body>
 </html>
