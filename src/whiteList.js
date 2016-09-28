@@ -6,6 +6,11 @@
 
 export default {
   UI: {
-    setNavHeader: true
+    setNavHeader: true,
+    preViewImages: true
+  },
+  systemAbility: {
+    takeCamera: true,
+    takePhoto: true
   }
 }
