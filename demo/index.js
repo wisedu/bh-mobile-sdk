@@ -75,7 +75,7 @@ init(() => {
       console.log(imgs)
       uploadToOSS(imgs, (ret) => {
         console.log('ok')
-        console.log(ret)
+        alert(JSON.stringify(ret))
       }, (err) => {
         console.log('error')
         console.log(err)
