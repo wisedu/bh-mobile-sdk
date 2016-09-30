@@ -4,7 +4,8 @@ init(() => {
   let {
     UI:{
       setNavHeader,
-      preViewImages
+      preViewImages,
+      openWebView
     },
     systemAbility: {
       takeCamera,
@@ -12,6 +13,13 @@ init(() => {
     },
     file: {
       uploadToOSS
+    },
+    cpdaily: {
+      showLoginView,
+      mainAppListChange,
+      showOrHideTabbar,
+      showSettingView,
+      openMarketList
     }
   } = SDK()
 
@@ -81,5 +89,24 @@ init(() => {
         console.log(err)
       })
     }, 3)
+  })
+  document.getElementById('showLoginView').addEventListener('click', () => {
+    showLoginView()
+  })
+  let showOrHideTabbarFlag = true
+  document.getElementById('showOrHideTabbar').addEventListener('click', () => {
+    showOrHideTabbar(showOrHideTabbarFlag)
+    showOrHideTabbarFlag = !showOrHideTabbarFlag
+  })
+  document.getElementById('showSettingView').addEventListener('click', () => {
+    showSettingView()
+  })
+  document.getElementById('openMarketList').addEventListener('click', () => {
+    openMarketList()
+  })
+  document.getElementById('mainAppListChange').addEventListener('click', () => {
+    mainAppListChange((ret) => {
+      console.log(ret)
+    })
   })
 })

@@ -7,7 +7,8 @@
 export default {
   UI: {
     setNavHeader: true,
-    preViewImages: true
+    preViewImages: true,
+    openWebView: true
   },
   systemAbility: {
     takeCamera: true,
@@ -15,5 +16,12 @@ export default {
   },
   file: {
     uploadToOSS: true
+  },
+  cpdaily: {
+    showLoginView: true,
+    showOrHideTabbar: true,
+    showSettingView: true,
+    mainAppListChange: true,
+    openMarketList: true
   }
 }
