@@ -23,6 +23,7 @@ export default {
     showOrHideTabbar: true,
     showSettingView: true,
     mainAppListChange: true,
-    openMarketList: true
+    openMarketList: true,
+    showMain: true
   }
 }
