@@ -8,7 +8,8 @@ export default {
   UI: {
     setNavHeader: true,
     preViewImages: true,
-    openWebView: true
+    openWebView: true,
+    actionSheet: true
   },
   systemAbility: {
     takeCamera: true,
