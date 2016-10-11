@@ -24,6 +24,7 @@ export default {
     showSettingView: true,
     mainAppListChange: true,
     openMarketList: true,
-    showMain: true
+    showMain: true,
+    getTenantID: true
   }
 }
