@@ -25,6 +25,7 @@ export default {
     mainAppListChange: true,
     openMarketList: true,
     showMain: true,
-    getTenantID: true
+    getTenantID: true,
+    setStatusBarColor: true
   }
 }
