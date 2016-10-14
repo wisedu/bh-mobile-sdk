@@ -26,6 +26,7 @@ export default {
     openMarketList: true,
     showMain: true,
     getTenantID: true,
-    setStatusBarColor: true
+    setStatusBarColor: true,
+    startIMChat: true
   }
 }
