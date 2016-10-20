@@ -27,6 +27,7 @@ export default {
     showMain: true,
     getTenantID: true,
     setStatusBarColor: true,
-    startIMChat: true
+    startIMChat: true,
+    onMineAppChanged: true
   }
 }
