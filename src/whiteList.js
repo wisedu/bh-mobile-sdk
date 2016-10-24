@@ -9,7 +9,10 @@ export default {
     setNavHeader: true,
     preViewImages: true,
     openWebView: true,
-    actionSheet: true
+    actionSheet: true,
+    singleSelect: true,
+    multiSelect: true,
+    multiPicker: true
   },
   systemAbility: {
     takeCamera: true,
