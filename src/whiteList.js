@@ -13,7 +13,8 @@ export default {
     actionSheet: true,
     singleSelect: true,
     multiSelect: true,
-    multiPicker: true
+    multiPicker: true,
+    alertView: true
   },
   systemAbility: {
     takeCamera: true,
