@@ -9,6 +9,7 @@ export default {
     setNavHeader: true,
     preViewImages: true,
     openWebView: true,
+    closeWebView: true,
     actionSheet: true,
     singleSelect: true,
     multiSelect: true,
