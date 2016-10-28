@@ -14,7 +14,8 @@ export default {
     singleSelect: true,
     multiSelect: true,
     multiPicker: true,
-    alertView: true
+    alertView: true,
+    webviewOnResume: true
   },
   systemAbility: {
     takeCamera: true,
