@@ -13,13 +13,6 @@ init(() => {
     },
     file: {
       uploadToOSS
-    },
-    cpdaily: {
-      showLoginView,
-      mainAppListChange,
-      showOrHideTabbar,
-      showSettingView,
-      openMarketList
     }
   } = SDK()
 

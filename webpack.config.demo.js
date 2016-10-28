@@ -13,7 +13,8 @@ module.exports = {
     contentBase: './demo',
     historyApiFallback: true,
     noInfo: true,
-    host: '0.0.0.0'
+    host: '0.0.0.0',
+    port: '3000'
   },
   module: {
     loaders: [
