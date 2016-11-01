@@ -5,14 +5,12 @@ init(() => {
     UI:{
       setNavHeader,
       preViewImages,
-      openWebView
+      openWebView,
+      webviewOnResume
     },
     systemAbility: {
       takeCamera,
       takePhoto
-    },
-    file: {
-      uploadToOSS
     }
   } = SDK()
 
@@ -68,38 +66,13 @@ init(() => {
       console.log(ret)
     }, 3)
   })
-  document.getElementById('uploadToOSS').addEventListener('click', () => {
-    takePhoto((ret) => {
-      let imgs = ret.map((item) => {
-        return item.url
-      })
-      console.log(imgs)
-      uploadToOSS(imgs, (ret) => {
-        console.log('ok')
-        alert(JSON.stringify(ret))
-      }, (err) => {
-        console.log('error')
-        console.log(err)
-      })
-    }, 3)
+  document.getElementById('openWebview').addEventListener('click', () => {
+    openWebView('http://www.baidu.com')
   })
-  document.getElementById('showLoginView').addEventListener('click', () => {
-    showLoginView()
+  webviewOnResume(() => {
+    console.log('aaaa')
   })
-  let showOrHideTabbarFlag = true
-  document.getElementById('showOrHideTabbar').addEventListener('click', () => {
-    showOrHideTabbar(showOrHideTabbarFlag)
-    showOrHideTabbarFlag = !showOrHideTabbarFlag
-  })
-  document.getElementById('showSettingView').addEventListener('click', () => {
-    showSettingView()
-  })
-  document.getElementById('openMarketList').addEventListener('click', () => {
-    openMarketList()
-  })
-  document.getElementById('mainAppListChange').addEventListener('click', () => {
-    mainAppListChange((ret) => {
-      console.log(ret)
-    })
+  webviewOnResume(() => {
+    console.log('bbbbb')
   })
 })

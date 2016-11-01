@@ -1,5 +1,5 @@
 import whiteList from './whiteList'
-
+import * as wrap from './wrap'
 export default () => {
   let mamp  = window.mamp
   let sdk = {}
@@ -11,9 +11,14 @@ export default () => {
       sdk[moduleName] = {}
       Object.keys(apis).forEach((apiKey) => {
         let api = apis[apiKey]
+        let wrapHandler = wrap[apiKey]
 
         if (api) {
-          sdk[moduleName][apiKey] = module[apiKey]
+          if (wrapHandler) {
+            sdk[moduleName][apiKey] = wrapHandler(module[apiKey])
+          } else {
+            sdk[moduleName][apiKey] = module[apiKey]
+          }
         }
       })
     }
