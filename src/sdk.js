@@ -1,6 +1,9 @@
 import whiteList from './whiteList'
 import * as wrap from './wrap'
+
+let SDK = null
 export default () => {
+  if (SDK) return SDK;
   let mamp  = window.mamp
   let sdk = {}
   Object.keys(whiteList).forEach((moduleName) => {
@@ -23,5 +26,6 @@ export default () => {
       })
     }
   })
-  return sdk
+  SDK = sdk
+  return SDK
 }
