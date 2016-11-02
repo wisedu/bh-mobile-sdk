@@ -15,6 +15,7 @@ export default {
     multiSelect: true,
     multiPicker: true,
     alertView: true,
+    toggleNavBar: true,
     webviewOnResume: true
   },
   systemAbility: {
