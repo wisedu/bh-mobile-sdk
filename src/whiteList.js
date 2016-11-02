@@ -7,6 +7,7 @@
 export default {
   UI: {
     setNavHeader: true,
+    setTitleText: true,
     preViewImages: true,
     openWebView: true,
     closeWebView: true,
