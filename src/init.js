@@ -1,3 +1,5 @@
+import SDK from './sdk'
+
 let INIT = false
 
 export default (callback) => {
@@ -5,8 +7,12 @@ export default (callback) => {
     console.error('请不要重复初始化')
     return
   }
-  if (localStorage.getItem('wisedu-browser-debug')) {
+  const _callback = () => {
     callback()
+    global.WISEDU_SDK = SDK()
+  }
+  if (localStorage.getItem('wisedu-browser-debug')) {
+    _callback()
   } else {
     let distUrl = 'mamp://injectionmamp/cordova.js' // 远端文件地址
 
@@ -18,7 +24,7 @@ export default (callback) => {
       window.location.href = 'mamp://close';
     }
 
-    document.addEventListener("deviceready", callback, false);
+    document.addEventListener("deviceready", _callback, false);
   }
 
   INIT = true
