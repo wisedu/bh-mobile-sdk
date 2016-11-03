@@ -1,4 +1,5 @@
 import whiteList from './whiteList'
+import ENV from './env'
 import * as wrap from './wrap'
 
 let SDK = null
@@ -8,23 +9,30 @@ export default () => {
   let sdk = {}
   Object.keys(whiteList).forEach((moduleName) => {
     let apis = whiteList[moduleName]
-    let module = mamp[moduleName]
+    let module = mamp[moduleName] || {}
 
-    if (module) {
-      sdk[moduleName] = {}
-      Object.keys(apis).forEach((apiKey) => {
-        let api = apis[apiKey]
-        let wrapHandler = wrap[apiKey]
+    sdk[moduleName] = {}
+    Object.keys(apis).forEach((apiKey) => {
+      let api = apis[apiKey]
+      let wrapHandler = wrap[apiKey]
 
-        if (api) {
-          if (wrapHandler) {
-            sdk[moduleName][apiKey] = wrapHandler(module[apiKey])
-          } else {
-            sdk[moduleName][apiKey] = module[apiKey]
+      if (api) {
+        if (!module[apiKey]) {
+          sdk[moduleName][apiKey] = () => {
+            if (ENV.wisedu) {
+              console.error(`调用的${moduleName}.${apiKey}接口不存在`)
+            } else {
+              console.log(`你当前不在 Hybrid 环境, ${apiKey} 处于 mock 实现`)
+            }
+
           }
+        } else if (wrapHandler) {
+          sdk[moduleName][apiKey] = wrapHandler(module[apiKey])
+        } else if (module[apiKey]) {
+          sdk[moduleName][apiKey] = module[apiKey]
         }
-      })
-    }
+      }
+    })
   })
   SDK = sdk
   return SDK
