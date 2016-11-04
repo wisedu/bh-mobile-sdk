@@ -8,12 +8,8 @@ export default (callback) => {
     return
   }
   const _callback = () => {
-    global.WISEDU_SDK = SDK()
-    // try {
-      callback()
-    // } catch (e){
-    //   console.error(e, 'SDK init 失败，请检查你传入init 函数的逻辑')
-    // }
+    global.BH_MOBILE_SDK = SDK()
+    callback()
   }
   if (localStorage.getItem('wisedu-browser-debug') || /wisedu/.test(navigator.userAgent) === false) {
     _callback()
