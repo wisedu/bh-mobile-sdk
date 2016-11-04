@@ -17,7 +17,8 @@ export default {
     multiPicker: true,
     alertView: true,
     toggleNavBar: true,
-    webviewOnResume: true
+    webviewOnResume: true,
+    showToast: true
   },
   systemAbility: {
     takeCamera: true,
