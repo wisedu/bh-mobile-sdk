@@ -5,6 +5,18 @@
 ## 安装
 
 ```
-// npm 安装
-npm install bh-mobile-sdk --save
+npm install bh-mobile-sdk
 ```
+
+## 使用
+
+```javascript
+import {init} from 'bh-mobile-sdk'
+
+init(() => {
+    console.log(WISEDU_SDK)
+})
+```
+
+从 `bh-mobile-sdk` 中引入 `init` 方法，执行成功后，在全局变量里就会有 `WISEDU_SDK`
+
