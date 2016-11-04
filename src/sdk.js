@@ -22,7 +22,7 @@ export default () => {
             if (ENV.wisedu) {
               console.error(`调用的${moduleName}.${apiKey}接口不存在`)
             } else {
-              console.log(`你当前不在 Hybrid 环境, ${apiKey} 处于 mock 实现`)
+              console.log(`你当前不在 Hybrid 环境, 或Hybrid 环境没有初始化, ${apiKey} 处于 mock 实现`)
             }
 
           }
