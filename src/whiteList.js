@@ -37,6 +37,7 @@ export default {
     getTenantID: true,
     setStatusBarColor: true,
     startIMChat: true,
-    onMineAppChanged: true
+    onMineAppChanged: true,
+    zhugeioTrack: true
   }
 }

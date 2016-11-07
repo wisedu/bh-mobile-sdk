@@ -3,13 +3,14 @@ import SDK from './sdk'
 let INIT = false
 
 export default (callback) => {
-  if (INIT) {
-    console.error('请不要重复初始化')
-    return
-  }
   const _callback = () => {
     global.BH_MOBILE_SDK = SDK()
     callback()
+  }
+  if (INIT) {
+    _callback()
+    console.error('请不要重复初始化')
+    return
   }
   if (localStorage.getItem('wisedu-browser-debug') || /wisedu/.test(navigator.userAgent) === false) {
     _callback()
