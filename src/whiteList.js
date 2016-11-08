@@ -10,7 +10,7 @@ export default {
     setTitleText: true,
     preViewImages: true,
     openWebView: true,
-    setStatusBarBgColor: true,
+    setNavBarBgColor: true,
     setStatusBarTintColor: true,
     closeWebView: true,
     actionSheet: true,
