@@ -40,6 +40,7 @@ export default {
     setStatusBarColor: true,
     startIMChat: true,
     onMineAppChanged: true,
-    zhugeioTrack: true
+    zhugeioTrack: true,
+    uploadToOSS: true
   }
 }
