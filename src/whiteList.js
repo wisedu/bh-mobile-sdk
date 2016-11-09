@@ -41,6 +41,7 @@ export default {
     startIMChat: true,
     onMineAppChanged: true,
     zhugeioTrack: true,
-    uploadToOSS: true
+    uploadToOSS: true,
+    openApp: true
   }
 }
