@@ -28,17 +28,25 @@ SDK 提供的 Api 是分模块的，先阶段一共有三大模块，`UI, system
 
 ### UI
 
-**setNavHeader(flag: Boolean)**
+**`setNavHeader(flag: Boolean)`**
 
 设置客户端原生头是否隐藏, 默认是显示的，传入 false 隐藏原生头
+
+#### Arguments
+
+1. `flag: Boolean` 控制头部是否显示，true: 显示, flase: 隐藏
 
 ```javascript
 BH_MOBILE_SDK.UI.setNavHeader(false)
 ```
 
-**setTitleText(title: String)**
+**`setTitleText(title: String)`**
 
 设置原生头的 title
+
+#### Arguments
+
+1. `title: String` 头部的 title
 
 ```javascript
 BH_MOBILE_SDK.UI.setTitleText('我是 title')
@@ -46,17 +54,19 @@ BH_MOBILE_SDK.UI.setTitleText('我是 title')
 
 ### social
 
-**share(config: Object)**
+**`share(config: Object)`**
 
-```
-config: {
-    title: String,
-    linkUrl: String
-}
-```
+分享内容
+
+#### Arguments
+
+1. `config: Object`: 分享的配置文件，title 控制分享的标题，linkUrl 控制分享的连接
 
 分享内容
 
 ```javascript
-BH_MOBILE_SDK.UI.setTitleText('我是 title')
+BH_MOBILE_SDK.social.share({
+    title: '分享的 title',
+    linkUrl: 'http://www.baidu.com' // 分享的链接
+})
 ```
