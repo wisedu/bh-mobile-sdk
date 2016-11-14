@@ -47,6 +47,8 @@ BH_MOBILE_SDK.UI.actionSheet('请选择', COUNTRY, (index) => {
 })
 ```
 
+---
+
 **`alertView(title: String, content: String, btnTitles: Array, callback: Function)`**
 
 系统alertView弹框，在页面正中间弹出
@@ -66,6 +68,8 @@ BH_MOBILE_SDK.UI.alertView('提示', '这个一个alertview', BTNS, (index) => {
 });
 ```
 
+---
+
 **`closeWebView`**
 
 关闭当前webview
@@ -74,8 +78,11 @@ BH_MOBILE_SDK.UI.alertView('提示', '这个一个alertview', BTNS, (index) => {
 BH_MOBILE_SDK.UI.closeWebView()
 ```
 
+---
+
 **`multiPicker`**
 
+---
 
 **`setNavHeader(flag: Boolean)`**
 
@@ -89,6 +96,8 @@ BH_MOBILE_SDK.UI.closeWebView()
 BH_MOBILE_SDK.UI.setNavHeader(false)
 ```
 
+---
+
 **`setTitleText(title: String)`**
 
 设置原生头的 title
@@ -100,6 +109,8 @@ BH_MOBILE_SDK.UI.setNavHeader(false)
 ```javascript
 BH_MOBILE_SDK.UI.setTitleText('我是 title')
 ```
+
+---
 
 ### social
 
