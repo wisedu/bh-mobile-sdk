@@ -6,28 +6,30 @@
 
 export default {
   UI: {
+    actionSheet: true,
+    alertView: true,
+    closeWebView: true,
+    multiPicker: true,
+    multiSelect: true,
+    openWebView: true,
+    preViewImages: true,
     setNavHeader: true,
     setTitleText: true,
-    preViewImages: true,
-    openWebView: true,
     setNavBarBgColor: true,
     setStatusBarTintColor: true,
-    closeWebView: true,
-    actionSheet: true,
     singleSelect: true,
-    multiSelect: true,
-    multiPicker: true,
-    alertView: true,
+    showToast: true,
     toggleNavBar: true,
-    webviewOnResume: true,
-    showToast: true
+    webviewOnResume: true
   },
   systemAbility: {
     takeCamera: true,
     takePhoto: true
   },
   file: {
-    uploadToOSS: true
+  },
+  Social: {
+    share: true
   },
   cpdaily: {
     showLoginView: true,
