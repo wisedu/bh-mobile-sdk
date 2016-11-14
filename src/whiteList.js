@@ -28,7 +28,7 @@ export default {
   },
   file: {
   },
-  Social: {
+  social: {
     share: true
   },
   cpdaily: {
