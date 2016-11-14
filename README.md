@@ -28,6 +28,55 @@ SDK 提供的 Api 是分模块的，先阶段一共有三大模块，`UI, system
 
 ### UI
 
+**`actionSheet(title: String, actions: Array, callback: Function)`**
+
+系统actionSheet弹框，在页面底部弹出，一般用于多个功能选择，例如对某张图片：分享，保存图片，点赞成等
+
+#### Arguments
+
+1. `title: String` 弹框标题
+2. `actions: Array` 弹框操作按钮的标题数组
+3. `callback(index): Function(Number)` 点击按钮后的回调方法 ，会返回点击的index
+    * `index: Number` 传入的按钮数据的index下标列表，从0开始
+
+```javascript
+const COUNTRY = ['中国','日本','韩国']
+
+BH_MOBILE_SDK.UI.actionSheet('请选择', COUNTRY, (index) => {
+    console.log('选择国家: ' + COUNTRY[index]);
+})
+```
+
+**`alertView(title: String, content: String, btnTitles: Array, callback: Function)`**
+
+系统alertView弹框，在页面正中间弹出
+
+#### Arguments
+
+1. `title: String` 弹框标题
+2. `content: String` 弹框标题
+3. `btnTitles: Array` 弹框操作按钮的标题数组
+4. `callback(index): Function(Number)` 点击按钮后的回调方法 ，会返回点击的index
+    * `index: Number` 传入的按钮数据的index下标列表，从0开始
+
+```javascript
+const BTNS = ['确定','取消']
+BH_MOBILE_SDK.UI.alertView('提示', '这个一个alertview', BTNS, (index) => {
+    console.log('点击了按钮' + BTNS[index]);
+});
+```
+
+**`closeWebView`**
+
+关闭当前webview
+
+```javascript
+BH_MOBILE_SDK.UI.closeWebView()
+```
+
+**`multiPicker`**
+
+
 **`setNavHeader(flag: Boolean)`**
 
 设置客户端原生头是否隐藏, 默认是显示的，传入 false 隐藏原生头
