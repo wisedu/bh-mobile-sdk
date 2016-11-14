@@ -44,4 +44,19 @@ BH_MOBILE_SDK.UI.setNavHeader(false)
 BH_MOBILE_SDK.UI.setTitleText('我是 title')
 ```
 
+### social
 
+**share(config: Object)**
+
+```
+config: {
+    title: String,
+    linkUrl: String
+}
+```
+
+分享内容
+
+```javascript
+BH_MOBILE_SDK.UI.setTitleText('我是 title')
+```
