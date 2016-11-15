@@ -16,3 +16,5 @@ indent_size = 2
 [*.html]
 indent_size = 2
 
+[README.md]
+indent_size = 4

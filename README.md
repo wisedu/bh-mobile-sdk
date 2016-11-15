@@ -84,6 +84,32 @@ BH_MOBILE_SDK.UI.closeWebView()
 
 ---
 
+**`preViewImages(imgs: Array, [index: Number])**
+
+原生图片浏览器，可以传递一组图片地址以及描述进行浏览，图片可以来自网络或者本地。组件默认带分享功能
+
+#### Arguments
+
+1. `imgs: Array` 图片数组，用于展示, 每一项的机构建下面
+    * `item: Object` url 控制图片地址，desc 控制图片描述
+    * url支持类型如下
+        1. http地址
+        2. 相对路径，相对于应用根目录，如：/image/qrcoder.png
+        3. 本地绝对路径，如：通过图片选择器选择的图片路径
+2. `index: Number` 默认展示哪一张，index从数组下标0开始
+
+```javascript
+BH_MOBILE_SDK.UI.preViewImages([{
+  url: "http://****/1.png",
+  desc: "我是图片的描述1"
+}, {
+  url: "http://****/2.png",
+  desc: "我是图片的描述2"
+}])
+```
+
+---
+
 **`setNavHeader(flag: Boolean)`**
 
 设置客户端原生头是否隐藏, 默认是显示的，传入 false 隐藏原生头
