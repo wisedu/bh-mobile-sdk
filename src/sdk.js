@@ -7,6 +7,12 @@ export default () => {
   if (SDK) return SDK;
   let mamp  = window.mamp
   let sdk = {}
+  if (mamp) {
+    sdk.ENV = 'hybrid'
+    if (mamp.cpdaily) {
+      sdk.ENV = 'hybrid.cpdaily'
+    }
+  }
   Object.keys(whiteList).forEach((moduleName) => {
     let apis = whiteList[moduleName]
     let module = mamp[moduleName] || {}
