@@ -32,18 +32,23 @@ export default {
     share: true
   },
   cpdaily: {
+    getTenantID: true,
+    getUserBasicInfos: true,
+    getUserInfo: true,
+    mainAppListChange: true,
+    onMineAppChanged: true,
+    openApp: true,
+    openHomePage: true,
+    openMarketList: true,
+    openUsersPage: true,
+    setStatusBarColor: true,
     showLoginView: true,
+    showMain: true,
     showOrHideTabbar: true,
     showSettingView: true,
-    mainAppListChange: true,
-    openMarketList: true,
-    showMain: true,
-    getTenantID: true,
-    setStatusBarColor: true,
     startIMChat: true,
-    onMineAppChanged: true,
-    zhugeioTrack: true,
+    toggleFocus: true,
     uploadToOSS: true,
-    openApp: true
+    zhugeioTrack: true
   }
 }
