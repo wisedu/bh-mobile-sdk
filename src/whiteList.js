@@ -27,6 +27,7 @@ export default {
     takePhoto: true
   },
   file: {
+    uploadToServer: true
   },
   social: {
     share: true

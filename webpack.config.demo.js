@@ -9,6 +9,7 @@ module.exports = {
     filename: 'dist.js',
     publicPath: '/dist/',
   },
+  devtool: 'source-map',
   devServer: {
     contentBase: './demo',
     historyApiFallback: true,

@@ -69,6 +69,13 @@ init(() => {
   document.getElementById('openWebview').addEventListener('click', () => {
     openWebView('http://www.baidu.com')
   })
+
+  document.getElementById('uploadToServer').addEventListener('click', () => {
+    BH_MOBILE_SDK.systemAbility.takePhoto((ret) => {
+      console.log(ret)
+      // BH_MOBILE_SDK.file.uploadToServer('/a/b/c', )
+    }, 3)
+  })
   webviewOnResume(() => {
     console.log('aaaa')
   })
