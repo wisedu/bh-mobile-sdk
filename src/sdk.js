@@ -1,6 +1,7 @@
 import whiteList from './whiteList'
 import ENV from './env'
 import * as wrap from './wrap'
+import * as mock from './mock'
 
 let SDK = null
 export default () => {
@@ -21,16 +22,20 @@ export default () => {
     Object.keys(apis).forEach((apiKey) => {
       let api = apis[apiKey]
       let wrapHandler = wrap[apiKey]
+      let mockHandler = mock[apiKey]
 
       if (api) {
         if (!module[apiKey]) {
-          sdk[moduleName][apiKey] = () => {
-            if (ENV.wisedu) {
-              console.error(`调用的${moduleName}.${apiKey}接口不存在`)
-            } else {
-              console.log(`你当前不在 Hybrid 环境, 或Hybrid 环境没有初始化, ${apiKey} 处于 mock 实现`)
+          if (mockHandler) {
+            sdk[moduleName][apiKey] = mockHandler
+          } else {
+            sdk[moduleName][apiKey] = () => {
+              if (ENV.wisedu) {
+                console.error(`调用的${moduleName}.${apiKey}接口不存在`)
+              } else {
+                console.log(`你当前不在 Hybrid 环境, 或Hybrid 环境没有初始化, ${apiKey} 处于 mock 实现`)
+              }
             }
-
           }
         } else if (wrapHandler) {
           sdk[moduleName][apiKey] = wrapHandler(module[apiKey])

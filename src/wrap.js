@@ -12,3 +12,12 @@ export let webviewOnResume = (original) => {
     called = true
   }
 }
+
+export let uploadToServer = (original) => {
+  return (server, config, cb) => {
+    console.log(server, config)
+    setTimeout(() => {
+      cb && cb()
+    }, 1)
+  }
+}

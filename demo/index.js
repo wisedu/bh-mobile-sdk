@@ -70,11 +70,37 @@ init(() => {
     openWebView('http://www.baidu.com')
   })
 
-  document.getElementById('uploadToServer').addEventListener('click', () => {
+  /*document.getElementById('uploadToServer1').addEventListener('click', () => {
     BH_MOBILE_SDK.systemAbility.takePhoto((ret) => {
       console.log(ret)
-      // BH_MOBILE_SDK.file.uploadToServer('/a/b/c', )
-    }, 3)
+      BH_MOBILE_SDK.file.uploadToServer('http://172.20.4.148:3333/upload', ret.map((file) => {
+        return file.url
+      }), (ret) => {
+        // debugger;
+        console.log(ret)
+      }, {
+        mimeType: 'image/jpeg',
+        params: {
+          scope: 'publicapptest',
+          fileToken: '1479451030089322',
+          isSingle: '1',
+          storeId: 'image'
+        }
+      })
+    })
+  })*/
+  document.getElementById('uploadToServer').addEventListener('click', () => {
+    BH_MOBILE_SDK.file.uploadToServer('http://172.20.5.224:3333/upload', {
+      mimeType: 'image/jpeg',
+      params: {
+        scope: 'publicapptest',
+        fileToken: '1479451030089322',
+        isSingle: '1',
+        storeId: 'image'
+      }
+    }, () => {
+      console.log('callback called')
+    })
   })
   webviewOnResume(() => {
     console.log('aaaa')
