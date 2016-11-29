@@ -27,7 +27,10 @@ export default {
     takePhoto: true
   },
   file: {
-    uploadToServer: true
+    uploadToServer: true,
+  },
+  wisedu: {
+    uploadToEMAP: true
   },
   social: {
     share: true

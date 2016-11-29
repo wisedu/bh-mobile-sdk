@@ -14,10 +14,7 @@ export let webviewOnResume = (original) => {
 }
 
 export let uploadToServer = (original) => {
-  return (server, config, cb) => {
-    console.log(server, config)
-    setTimeout(() => {
-      cb && cb()
-    }, 1)
+  return (server, filePaths, config, cb) => {
+    original(server, filePaths, cb, config)
   }
 }
