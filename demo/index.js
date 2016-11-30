@@ -81,7 +81,7 @@ init(() => {
       }).catch((error) => {
         console.error(error)
       })
-    })
+    }, 3)
   })
   webviewOnResume(() => {
     console.log('aaaa')

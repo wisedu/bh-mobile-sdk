@@ -18,7 +18,7 @@ export let uploadToEMAP = (server, files, config = {}) => {
     config.params = {
       scope,
       fileToken: token,
-      isSingle: '1',
+      // isSingle: '1',
       storeId: 'image'
     }
     BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFile.do', files, config, (result) => {
@@ -56,6 +56,7 @@ export let uploadToEMAP = (server, files, config = {}) => {
               let result = JSON.parse(this.responseText)
               if (result.success) {
                 resolve({
+                  success: true,
                   token
                 })
               }
