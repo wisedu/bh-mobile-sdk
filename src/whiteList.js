@@ -27,6 +27,7 @@ export default {
     takePhoto: true
   },
   file: {
+    filePreview: true,
     uploadToServer: true,
   },
   wisedu: {
