@@ -150,7 +150,7 @@ BH_MOBILE_SDK.UI.setTitleText('我是 title')
     * `file: Object` url: 图片本地地址，base64: 图片的 base64字符串
 
 ```javascript
-BH_MOBILE_SDK.social.takeCamera((ret) => {
+BH_MOBILE_SDK.systemAbility.takeCamera((ret) => {
   console.log(ret)
 })
 ```
@@ -167,7 +167,7 @@ BH_MOBILE_SDK.social.takeCamera((ret) => {
 2. `limit: Number` 允许选择的图片个数，不传默认为1
 
 ```javascript
-BH_MOBILE_SDK.social.takeCamera((ret) => {
+BH_MOBILE_SDK.systemAbility.takeCamera((ret) => {
   console.log(ret)
 })
 ```
