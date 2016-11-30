@@ -81,21 +81,6 @@ init(() => {
       }).catch((error) => {
         console.error(error)
       })
-      /*console.log(ret)
-      BH_MOBILE_SDK.file.uploadToServer('http://172.20.4.114:3333/upload', ret.map((file) => {
-        return file.url
-      }), {
-        mimeType: 'image/jpeg',
-        params: {
-          scope: 'publicapptest',
-          fileToken: '1479451030089322',
-          isSingle: '1',
-          storeId: 'image'
-        }
-      }, (ret) => {
-        // debugger;
-        console.log(ret)
-      })*/
     })
   })
   webviewOnResume(() => {

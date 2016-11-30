@@ -21,7 +21,7 @@ export let uploadToEMAP = (server, files, config = {}) => {
       isSingle: '1',
       storeId: 'image'
     }
-    BH_MOBILE_SDK.file.uploadToServer(server, files, config, (result) => {
+    BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFile.do', files, config, (result) => {
       let error = false
       result.forEach((fileResult) => {
         if (fileResult.code !== 200) {
@@ -60,12 +60,11 @@ export let uploadToEMAP = (server, files, config = {}) => {
           }
         });
 
-        xhr.open("POST", "http://amptest.wisedu.com/publicapp/sys/emapcomponent/file/saveAttachment.do");
+        xhr.open("POST", server + "/sys/emapcomponent/file/saveAttachment.do");
         xhr.setRequestHeader("cache-control", "no-cache");
         xhr.setRequestHeader("postman-token", "c5696e9c-d1c1-1dd4-677f-42b591f8b678");
 
         xhr.send(data);
-        resolve(result)
       }
     })
   })
