@@ -138,6 +138,40 @@ BH_MOBILE_SDK.UI.setTitleText('我是 title')
 
 ---
 
+### systemAbility
+
+**`takeCamera(cb: Function)`**
+
+唤起系统相机拍照
+
+#### Arguments
+
+1. `cb(files): Function(Array<Object>)` 回调，返回拍照图片的信息
+    * `file: Object` url: 图片本地地址，base64: 图片的 base64字符串
+
+```javascript
+BH_MOBILE_SDK.social.takeCamera((ret) => {
+  console.log(ret)
+})
+```
+---
+
+**`takePhoto(cb: Function, limit: Number)`**
+
+唤起系统相册
+
+#### Arguments
+
+1. `cb(files): Function(Array<Object>)` 回调，返回拍照图片的信息
+    * `file: Object` url: 图片本地地址，base64: 图片的 base64字符串
+2. `limit: Number` 允许选择的图片个数，不传默认为1
+
+```javascript
+BH_MOBILE_SDK.social.takeCamera((ret) => {
+  console.log(ret)
+})
+```
+
 ### social
 
 **`share(config: Object)`**
