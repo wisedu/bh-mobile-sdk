@@ -72,7 +72,7 @@ init(() => {
   document.getElementById('uploadToServer').addEventListener('click', () => {
     BH_MOBILE_SDK.systemAbility.takePhoto((ret) => {
       BH_MOBILE_SDK.wisedu.uploadToEMAP(
-        'http://amptest.wisedu.com/publicapp/sys/emapcomponent/file/uploadTempFile.do',
+        'http://amptest.wisedu.com/publicapp',
         ret.map((file) => {
           return file.url
         })

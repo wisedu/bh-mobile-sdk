@@ -48,23 +48,27 @@ export let uploadToEMAP = (server, files, config = {}) => {
         let xhr = new XMLHttpRequest();
         xhr.withCredentials = true;
 
-        xhr.addEventListener("readystatechange", function () {
-          if (this.readyState === 4 && xhr.status == 200) {
+        xhr.open("POST", server + "/sys/emapcomponent/file/saveAttachment.do");
+        xhr.send(data);
+        xhr.onload = function () {
+          if (this.status >= 200 && this.status < 300) {
             try {
-              resolve(JSON.parse(this.responseText))
+              let result = JSON.parse(this.responseText)
+              if (result.success) {
+                resolve({
+                  token
+                })
+              }
             } catch (e) {
               reject(e)
             }
           } else {
-            reject(xhr)
+            reject(this.statusText);
           }
-        });
-
-        xhr.open("POST", server + "/sys/emapcomponent/file/saveAttachment.do");
-        xhr.setRequestHeader("cache-control", "no-cache");
-        xhr.setRequestHeader("postman-token", "c5696e9c-d1c1-1dd4-677f-42b591f8b678");
-
-        xhr.send(data);
+        };
+        xhr.onerror = function () {
+          reject(this.statusText);
+        };
       }
     })
   })
