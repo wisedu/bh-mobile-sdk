@@ -37,6 +37,7 @@ export default {
     share: true
   },
   cpdaily: {
+    clickHomeTab: true,
     getTenantID: true,
     getUserBasicInfos: true,
     getUserInfo: true,
