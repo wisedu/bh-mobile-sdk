@@ -14,7 +14,7 @@ npm install bh-mobile-sdk
 import {init} from 'bh-mobile-sdk'
 
 init(() => {
-    console.log(WISEDU_SDK)
+    console.log(BH_MOBILE_SDK)
 })
 ```
 
