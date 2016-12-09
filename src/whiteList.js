@@ -23,6 +23,8 @@ export default {
     webviewOnResume: true
   },
   systemAbility: {
+    getPasteboard: true,
+    setPasteboard: true,
     takeCamera: true,
     takePhoto: true
   },
@@ -36,6 +38,9 @@ export default {
   social: {
     share: true
   },
+  http: {
+    sendGetRequest: true
+  },
   cpdaily: {
     clickHomeTab: true,
     getTenantID: true,
@@ -43,7 +48,9 @@ export default {
     getUserInfo: true,
     mainAppListChange: true,
     onMineAppChanged: true,
+    onMainNavTabChanged: true,
     openApp: true,
+    openFullWebView: true,
     openHomePage: true,
     openMarketList: true,
     openUsersPage: true,
@@ -54,6 +61,7 @@ export default {
     showSettingView: true,
     startIMChat: true,
     toggleFocus: true,
+    toggleNavTransparent: true,
     uploadToOSS: true,
     zhugeioTrack: true
   }
