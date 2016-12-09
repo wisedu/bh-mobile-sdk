@@ -8,6 +8,7 @@ export default () => {
   if (SDK) return SDK;
   let mamp  = window.mamp
   let sdk = {}
+  // if true
   if (mamp) {
     sdk.ENV = 'hybrid'
     if (mamp.cpdaily) {
@@ -21,6 +22,7 @@ export default () => {
     sdk[moduleName] = {}
     Object.keys(apis).forEach((apiKey) => {
       let api = apis[apiKey]
+      // review: move position
       let wrapHandler = wrap[apiKey]
       let mockHandler = mock[apiKey]
 
