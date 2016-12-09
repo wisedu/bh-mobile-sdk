@@ -74,3 +74,6 @@ export let uploadToEMAP = (server, files, config = {}) => {
     })
   })
 }
+export let getPasteboard = (cb) => {
+  cb('')
+}
