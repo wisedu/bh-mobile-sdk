@@ -77,3 +77,8 @@ export let uploadToEMAP = (server, files, config = {}) => {
 export let getPasteboard = (cb) => {
   cb('')
 }
+export let sendGetRequest = (url, cb) => {
+  cb({
+    code: '404'
+  })
+}
