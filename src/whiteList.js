@@ -9,6 +9,8 @@ export default {
     actionSheet: true,
     alertView: true,
     closeWebView: true,
+    datePicker: true,
+    dateTimePicker: true,
     multiPicker: true,
     multiSelect: true,
     openWebView: true,
