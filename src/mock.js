@@ -82,3 +82,6 @@ export let sendGetRequest = (url, cb) => {
     code: '404'
   })
 }
+export let openWebView = (url, config) => {
+  window.open(url)
+}
