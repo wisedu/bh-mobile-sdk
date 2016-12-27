@@ -82,6 +82,21 @@ BH_MOBILE_SDK.UI.closeWebView()
 
 **`multiPicker`**
 
+```javascript
+BH_MOBILE_SDK.UI.singleSelect(['选项1', '选项2'], 0, (index) => {
+  console.log(index) // 选择了第几项
+})
+```
+---
+
+
+**`multiPicker`**
+
+```javascript
+BH_MOBILE_SDK.UI.multiPicker([{'选项组1': ['选项1', '选项2']}, {'选项组2': ['选项1', '选项2']}], (index) => {
+  console.log(index) // 选择了第几项，以逗号分隔 比如 0,1 选择的是选项组1，选项2
+})
+```
 ---
 
 **`preViewImages(imgs: Array, [index: Number])**
