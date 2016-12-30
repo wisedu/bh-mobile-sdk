@@ -9,11 +9,13 @@ export default () => {
   let mamp  = window.mamp
   let sdk = {}
   // if true
-  if (mamp) {
+  if (ENV.wisedu) {
     sdk.ENV = 'hybrid'
     if (mamp.cpdaily) {
       sdk.ENV = 'hybrid.cpdaily'
     }
+  } else {
+    sdk.ENV = 'browser'
   }
   Object.keys(whiteList).forEach((moduleName) => {
     let apis = whiteList[moduleName]
