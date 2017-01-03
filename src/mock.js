@@ -91,4 +91,12 @@ export let openFullWebView = (url, config) => {
 export let closeWebView = (url, config) => {
   window.close()
 }
-
+export let webviewOnResume = (cb) => {
+  if (document.addEventListener) {
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        cb()
+      }
+    })
+  }
+}
