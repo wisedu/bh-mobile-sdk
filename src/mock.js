@@ -85,3 +85,10 @@ export let sendGetRequest = (url, cb) => {
 export let openWebView = (url, config) => {
   window.open(url)
 }
+export let openFullWebView = (url, config) => {
+  window.open(url)
+}
+export let closeWebView = (url, config) => {
+  window.close()
+}
+
