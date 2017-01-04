@@ -28,7 +28,8 @@ export default {
     getPasteboard: true,
     setPasteboard: true,
     takeCamera: true,
-    takePhoto: true
+    takePhoto: true,
+    tel: true
   },
   file: {
     filePreview: true,
