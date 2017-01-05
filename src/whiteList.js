@@ -55,6 +55,7 @@ export default {
     onMineAppChanged: true,
     onMainNavTabChanged: true,
     openApp: true,
+    openCommentView: true,
     openFullWebView: true,
     openHomePage: true,
     openMarketList: true,
