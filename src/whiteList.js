@@ -46,6 +46,8 @@ export default {
   },
   cpdaily: {
     clickHomeTab: true,
+    formatImageToBase64: true,
+    getImagesInfo: true,
     getTenantID: true,
     getUserBasicInfos: true,
     getUserInfo: true,
@@ -57,6 +59,7 @@ export default {
     openHomePage: true,
     openMarketList: true,
     openUsersPage: true,
+    parseInfoFromHTML: true,
     setStatusBarColor: true,
     showLoginView: true,
     showMain: true,

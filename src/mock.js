@@ -100,3 +100,10 @@ export let webviewOnResume = (cb) => {
     })
   }
 }
+export let formatImageToBase64 = (img, cb) => {
+  cb(img)
+}
+
+export let parseInfoFromHTML = (url, cb) => {
+  cb({img: "http://www.baidu.com/img/bd_logo1.png", title: "百度一下，你就知道"})
+}
