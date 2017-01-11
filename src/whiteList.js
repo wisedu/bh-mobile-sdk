@@ -27,6 +27,8 @@ export default {
   systemAbility: {
     getPasteboard: true,
     setPasteboard: true,
+    setIdleTimerDisabled: true,
+    setBrightness: true,
     takeCamera: true,
     takePhoto: true,
     tel: true
@@ -46,6 +48,7 @@ export default {
   },
   cpdaily: {
     clickHomeTab: true,
+    checkPublishFresh: true,
     formatImageToBase64: true,
     getImagesInfo: true,
     getTenantID: true,
@@ -60,7 +63,10 @@ export default {
     openHomePage: true,
     openMarketList: true,
     openUsersPage: true,
+    onPublishFreshListener: true,
     parseInfoFromHTML: true,
+    postNotification: true,
+    publishFresh: true,
     setStatusBarColor: true,
     showLoginView: true,
     showMain: true,
