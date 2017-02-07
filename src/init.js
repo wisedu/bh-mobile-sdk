@@ -15,7 +15,7 @@ export default (callback) => {
   if (localStorage.getItem('wisedu-browser-debug') || /wisedu/.test(navigator.userAgent) === false) {
     _callback()
   } else {
-    let distUrl = 'mamp://injectionmamp/cordova.js' // 远端文件地址
+    let distUrl = 'https://injectionmamp/cordova.js' // 远端文件地址
 
     var script = document.createElement("script")
     script.src = distUrl
