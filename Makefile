@@ -13,7 +13,7 @@ dist:
 deploy:
 	npm run deploy
 
-pub:
+pub: dist
 	./node_modules/.bin/kp $(filter-out $@,$(MAKECMDGOALS))
 
 help:
