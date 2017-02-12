@@ -13,7 +13,11 @@ dist:
 deploy:
 	npm run deploy
 
-pub: dist
+dist-lib: dist
+	git add .
+	git commit -m 'refine lib'
+
+pub: dist-lib
 	./node_modules/.bin/kp $(filter-out $@,$(MAKECMDGOALS))
 
 help:
