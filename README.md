@@ -8,6 +8,14 @@
 npm install bh-mobile-sdk
 ```
 
+## 引入
+
+提供多种的引入方式,支持 `es6 modules`, `cmd`, `amd`, `script 引入`
+
+`script` 引入的地址是`bh-mobile-sdk/lib/index.js`，引入后这个库在全局的命名空间是`BH_MOBILE`，比如你想调用下文的 init 方法就用`BH_MOBILE.init` 来调用
+
+推荐使用es6 modules的方式引入
+
 ## 使用
 
 ```javascript
@@ -25,6 +33,12 @@ init(() => {
 SDK 提供的 Api 是分模块的，先阶段一共有三大模块，`UI, systemAbility, file`
 
 如果想调用某个 UI 模块下的的 api，`BH_MOBILE_SDK.UI.closeWebView`
+
+### ENV
+
+`BH_MOBILE_SDK.ENV`
+
+这是一个静态字符串，标识当前 SDK 的执行环境
 
 ### UI
 
