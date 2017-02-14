@@ -22,6 +22,11 @@ export default {
     singleSelect: true,
     showToast: true,
     toggleNavBar: true,
+    togglePullRefresh: true,
+    finishPullRefresh: true,
+    startPullRefresh: true,
+    togglePullUp: true,
+    finishPullUp: true,
     webviewOnResume: true
   },
   systemAbility: {
@@ -72,6 +77,7 @@ export default {
     showMain: true,
     showOrHideTabbar: true,
     showSettingView: true,
+    showUserGuide: true,
     startIMChat: true,
     toggleFocus: true,
     toggleNavTransparent: true,
