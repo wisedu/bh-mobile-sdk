@@ -2,7 +2,7 @@ import SDK from './sdk'
 
 let INIT = false
 
-export default (callback, http) => {
+export default (callback, https) => {
   const _callback = () => {
     global.BH_MOBILE_SDK = SDK()
     callback()
@@ -15,7 +15,7 @@ export default (callback, http) => {
   if (localStorage.getItem('wisedu-browser-debug') || /wisedu/.test(navigator.userAgent) === false) {
     _callback()
   } else {
-    let distUrl = http ? 'http://injectionmamp/cordova.js' : 'mamp://injectionmamp/cordova.js' // 远端文件地址
+    let distUrl = https ? 'https://injectionmamp/cordova.js' : 'mamp://injectionmamp/cordova.js' // 远端文件地址
 
     var script = document.createElement("script")
     script.src = distUrl
