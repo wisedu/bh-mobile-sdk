@@ -51,6 +51,12 @@ export default {
   http: {
     sendGetRequest: true
   },
+  qrcode: {
+    generateCode: true,
+    generateCodeAndShow: true,
+    scan: true,
+    recognize: true
+  },
   cpdaily: {
     clickHomeTab: true,
     checkPublishFresh: true,

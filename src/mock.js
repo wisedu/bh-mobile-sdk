@@ -109,3 +109,6 @@ export let parseInfoFromHTML = (url, cb) => {
 export let openCommentView = (url, freshId) => {
   window.open(url)
 }
+export let scan = (callback, mock) => {
+  callback(mock)
+}
