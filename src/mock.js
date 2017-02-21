@@ -112,3 +112,23 @@ export let openCommentView = (url, freshId) => {
 export let scan = (callback, mock) => {
   callback(mock)
 }
+
+let pullRefresh = null
+export let togglePullRefresh = (flag, callback) => {
+  if (flag) {
+    pullRefresh = callback
+  } else {
+    pullRefresh = null
+  }
+}
+export let startPullRefresh = () => {
+  pullRefresh && pullRefresh()
+}
+
+export let togglePullUp = (flag, callback) => {
+  if (flag) {
+    return callback
+  } else {
+    return null
+  }
+}
