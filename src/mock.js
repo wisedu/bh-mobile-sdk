@@ -132,3 +132,7 @@ export let togglePullUp = (flag, callback) => {
     return null
   }
 }
+
+export let getTenantID = (callback, mock) => {
+  callback(mock)
+}
