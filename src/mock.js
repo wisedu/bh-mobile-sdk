@@ -139,3 +139,6 @@ export let getTenantID = (callback, mock) => {
 export let getUserInfo = (callback, mock) => {
   callback(mock)
 }
+export let getCircleList = (callback) => {
+  callback([])
+}

@@ -65,6 +65,7 @@ export default {
     getTenantID: true,
     getUserBasicInfos: true,
     getUserInfo: true,
+    getCircleList: true,
     mainAppListChange: true,
     onMineAppChanged: true,
     onMainNavTabChanged: true,
