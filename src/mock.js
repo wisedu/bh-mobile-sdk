@@ -136,3 +136,6 @@ export let togglePullUp = (flag, callback) => {
 export let getTenantID = (callback, mock) => {
   callback(mock)
 }
+export let getUserInfo = (callback, mock) => {
+  callback(mock)
+}
