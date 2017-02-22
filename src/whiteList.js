@@ -19,6 +19,7 @@ export default {
     setTitleText: true,
     setNavBarBgColor: true,
     setStatusBarTintColor: true,
+    setBouncesEnabled: true,
     singleSelect: true,
     showToast: true,
     toggleNavBar: true,
