@@ -1,6 +1,7 @@
 import SDK, {init} from 'src/index'
 
 init(() => {
+  console.log('init')
   let {
     UI:{
       setNavHeader,
@@ -90,3 +91,9 @@ init(() => {
     console.log('bbbbb')
   })
 })
+
+setTimeout(() => {
+  init(() => {
+    console.log('init delay')
+  })
+}, 1000)

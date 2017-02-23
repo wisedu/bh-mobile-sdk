@@ -1,32 +1,40 @@
 import SDK from './sdk'
 
 let INIT = false
-
-export default (callback, https) => {
-  const _callback = () => {
-    global.BH_MOBILE_SDK = SDK()
-    callback()
-  }
-  if (INIT) {
-    _callback()
-    console.error('请不要重复初始化')
-    return
-  }
-  if (localStorage.getItem('wisedu-browser-debug') || /wisedu/.test(navigator.userAgent) === false) {
-    _callback()
-  } else {
-    let distUrl = https ? 'https://injectionmamp/cordova.js' : 'mamp://injectionmamp/cordova.js' // 远端文件地址
-
-    var script = document.createElement("script")
-    script.src = distUrl
-    document.head.appendChild(script)
-
-    window.close = function() {
-      window.location.href = 'mamp://close';
-    }
-
-    document.addEventListener("deviceready", _callback, false);
-  }
-
+let INJECT = false
+let stack = []
+const _callback = () => {
   INIT = true
+  global.BH_MOBILE_SDK = SDK()
+  stack.forEach((callback) => {
+    callback()
+  })
+  console.log('ok')
+}
+export default (callback, https) => {
+  if (INIT) {
+    callback()
+  } else {
+    stack.push(callback)
+  }
+  if (INJECT === false) {
+    if (localStorage.getItem('wisedu-browser-debug') || /wisedu/.test(navigator.userAgent) === false) {
+      setTimeout(() => {
+        _callback()
+      }, 0)
+    } else {
+      let distUrl = https ? 'https://injectionmamp/cordova.js' : 'mamp://injectionmamp/cordova.js' // 远端文件地址
+
+      var script = document.createElement("script")
+      script.src = distUrl
+      document.head.appendChild(script)
+
+      window.close = function() {
+        window.location.href = 'mamp://close';
+      }
+
+      document.addEventListener("deviceready", _callback, false);
+    }
+    INJECT = true
+  }
 }
