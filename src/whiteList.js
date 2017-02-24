@@ -83,6 +83,7 @@ export default {
     setStatusBarColor: true,
     showLoginView: true,
     showMain: true,
+    showOrgSelector: true,
     showOrHideTabbar: true,
     showSettingView: true,
     showUserGuide: true,
