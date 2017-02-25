@@ -9,7 +9,6 @@ const _callback = () => {
   stack.forEach((callback) => {
     callback()
   })
-  console.log('ok')
 }
 export default (callback, https) => {
   if (INIT) {
