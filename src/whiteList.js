@@ -64,6 +64,7 @@ export default {
     formatImageToBase64: true,
     getImagesInfo: true,
     getTenantID: true,
+    getTenantInfo: true,
     getUserBasicInfos: true,
     getUserInfo: true,
     getCircleList: true,
