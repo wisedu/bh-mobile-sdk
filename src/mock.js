@@ -145,8 +145,8 @@ export let getCircleList = (callback) => {
 export let getTenantInfo = (callback, mock) => {
   callback(mock)
 }
-export let getConnectionType = (callback, mock) => {
-  callback(mock)
+export let getConnectionType = (mock) => {
+  return mock
 }
 export let registerNetworkChangeCallback = (callback, mock) => {
   if (mock) {
