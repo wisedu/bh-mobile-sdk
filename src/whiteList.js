@@ -58,6 +58,10 @@ export default {
     scan: true,
     recognize: true
   },
+  device: {
+    getConnectionType: true,
+    registerNetworkChangeCallback: true
+  },
   cpdaily: {
     clickHomeTab: true,
     checkPublishFresh: true,

@@ -145,3 +145,13 @@ export let getCircleList = (callback) => {
 export let getTenantInfo = (callback, mock) => {
   callback(mock)
 }
+export let getConnectionType = (callback, mock) => {
+  callback(mock)
+}
+export let registerNetworkChangeCallback = (callback, mock) => {
+  if (mock) {
+    setTimeout(() => {
+      callback(mock)
+    }, 10000)
+  }
+}
