@@ -92,6 +92,7 @@ export default {
     showOrHideTabbar: true,
     showSettingView: true,
     showUserGuide: true,
+    startComment: true,
     startIMChat: true,
     toggleFocus: true,
     toggleNavTransparent: true,
