@@ -81,6 +81,7 @@ export default {
     openHomePage: true,
     openMarketList: true,
     openUsersPage: true,
+    openPhotoWall: true,
     onPublishFreshListener: true,
     parseInfoFromHTML: true,
     postNotification: true,
