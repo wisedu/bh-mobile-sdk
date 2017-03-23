@@ -22,6 +22,7 @@ export default {
     setBouncesEnabled: true,
     singleSelect: true,
     showToast: true,
+    toggleLoading: true,
     toggleNavBar: true,
     togglePullRefresh: true,
     finishPullRefresh: true,
