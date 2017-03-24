@@ -50,5 +50,16 @@ export default () => {
     })
   })
   SDK = sdk
+  SDK.checkAPI = (apiName) => {
+    let api = mamp
+    apiName = apiName.split('.')
+    apiName.forEach((name) => {
+      if (api) {
+        if (api[name]) api = api[name]
+        else api = null
+      }
+    })
+    return !!api
+  }
   return SDK
 }

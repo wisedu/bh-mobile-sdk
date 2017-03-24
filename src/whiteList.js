@@ -98,6 +98,7 @@ export default {
     startIMChat: true,
     toggleFocus: true,
     toggleNavTransparent: true,
+    togglePublishBtn: true,
     uploadToOSS: true,
     zhugeioTrack: true
   }
