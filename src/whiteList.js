@@ -96,6 +96,8 @@ export default {
     showUserGuide: true,
     startComment: true,
     startIMChat: true,
+    retryFreshSend: true,
+    cancelFreshSend: true,
     toggleFocus: true,
     toggleNavTransparent: true,
     togglePublishBtn: true,
