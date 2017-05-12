@@ -213,6 +213,7 @@ BH_MOBILE_SDK.systemAbility.takeCamera((ret) => {
 
 分享内容
 
+
 ```javascript
 BH_MOBILE_SDK.social.share({
     title: '分享的 title',
