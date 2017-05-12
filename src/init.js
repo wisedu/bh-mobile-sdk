@@ -3,6 +3,7 @@ import SDK from './sdk'
 let INIT = false
 let INJECT = false
 let stack = []
+
 const _callback = () => {
   INIT = true
   global.BH_MOBILE_SDK = SDK()
