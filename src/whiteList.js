@@ -103,5 +103,8 @@ export default {
     togglePublishBtn: true,
     uploadToOSS: true,
     zhugeioTrack: true
+  },
+  geolocation: {
+    getCurrentPosition: true
   }
 }
