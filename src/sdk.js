@@ -9,6 +9,7 @@ export default () => {
   let mamp  = window.mamp
   let sdk = {}
   // if true
+  // alert('ENV.wisedu:' + ENV.wisedu)
   if (ENV.wisedu) {
     sdk.ENV = 'hybrid'
     if (mamp.cpdaily) {

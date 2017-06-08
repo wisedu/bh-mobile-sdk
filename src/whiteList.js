@@ -102,7 +102,9 @@ export default {
     toggleNavTransparent: true,
     togglePublishBtn: true,
     uploadToOSS: true,
-    zhugeioTrack: true
+    zhugeioTrack: true,
+    jumpToCicleById: true,
+    openCircleById: true
   },
   geolocation: {
     getCurrentPosition: true

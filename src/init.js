@@ -5,6 +5,7 @@ let INJECT = false
 let stack = []
 
 const _callback = () => {
+  // alert('trigger callback')
   INIT = true
   global.BH_MOBILE_SDK = SDK()
   stack.forEach((callback) => {
@@ -27,13 +28,14 @@ export default (callback, https) => {
 
       var script = document.createElement("script")
       script.src = distUrl
+
+      document.addEventListener("deviceready", _callback, false);
       document.head.appendChild(script)
 
       window.close = function() {
         window.location.href = 'mamp://close';
       }
-
-      document.addEventListener("deviceready", _callback, false);
+      // alert('add ready event')
     }
     INJECT = true
   }
