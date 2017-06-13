@@ -21,7 +21,7 @@ export let uploadToEMAP = (server, files, config = {}) => {
       // isSingle: '1',
       storeId: 'image'
     }
-    BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFile.do', files, config, (result) => {
+    BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFileAsAttachment.do', files, config, (result) => {
       let error = false
       result.forEach((fileResult) => {
         if (fileResult.code !== 200) {
@@ -40,6 +40,9 @@ export let uploadToEMAP = (server, files, config = {}) => {
       if (error) {
         reject(result)
       } else {
+        // 修改为emap自动保存的上传接口
+        resolve(fileResult.response)
+        /*
         let data = new FormData();
         data.append("scope", scope);
         data.append("fileToken", token);
@@ -70,6 +73,7 @@ export let uploadToEMAP = (server, files, config = {}) => {
         xhr.onerror = function () {
           reject(this.statusText);
         };
+        */
       }
     })
   })
