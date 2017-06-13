@@ -41,7 +41,13 @@ export let uploadToEMAP = (server, files, config = {}) => {
         reject(result)
       } else {
         // 修改为emap自动保存的上传接口
-        resolve(fileResult.response)
+        resolve({
+          success: true,
+          token,
+          data: result.map(item => {
+            return item.response
+          })
+        })
         /*
         let data = new FormData();
         data.append("scope", scope);
