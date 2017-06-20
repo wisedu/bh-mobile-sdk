@@ -104,7 +104,8 @@ export default {
     uploadToOSS: true,
     zhugeioTrack: true,
     jumpToCicleById: true,
-    openCircleById: true
+    openCircleById: true,
+    openPersonalHomeWithUserId: true
   },
   geolocation: {
     getCurrentPosition: true
