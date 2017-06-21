@@ -105,6 +105,7 @@ export default {
     zhugeioTrack: true,
     jumpToCicleById: true,
     openCircleById: true,
+    openPublishFreshView: true,
     openPersonalHomeWithUserId: true
   },
   geolocation: {
