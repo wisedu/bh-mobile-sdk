@@ -106,6 +106,7 @@ export default {
     jumpToCicleById: true,
     openCircleById: true,
     openPublishFreshView: true,
+    openTribeListView: true,
     openPersonalHomeWithUserId: true
   },
   geolocation: {
