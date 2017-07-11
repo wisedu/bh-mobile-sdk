@@ -107,7 +107,8 @@ export default {
     openCircleById: true,
     openPublishFreshView: true,
     openTribeListView: true,
-    openPersonalHomeWithUserId: true
+    openPersonalHomeWithUserId: true,
+    openFreshDetail: true
   },
   geolocation: {
     getCurrentPosition: true
