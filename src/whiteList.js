@@ -108,6 +108,7 @@ export default {
     openPublishFreshView: true,
     openTribeListView: true,
     openPersonalHomeWithUserId: true,
+    openPersonalHome: true,
     openFreshDetail: true
   },
   geolocation: {
