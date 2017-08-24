@@ -24,7 +24,9 @@ export default (callback, https) => {
         _callback()
       }, 0)
     } else {
-      let distUrl = https ? 'https://injectionmamp/cordova.js' : 'mamp://injectionmamp/cordova.js' // 远端文件地址
+      //elvis 2017-8-24 客户端提供https服务，全部走https协议
+      // let distUrl = https ? 'https://injectionmamp/cordova.js' : 'mamp://injectionmamp/cordova.js' // 远端文件地址
+      let distUrl = 'https://injectionmamp/cordova.js' // 远端文件地址
 
       var script = document.createElement("script")
       script.src = distUrl
