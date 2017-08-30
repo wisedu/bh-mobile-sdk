@@ -109,7 +109,8 @@ export default {
     openTribeListView: true,
     openPersonalHomeWithUserId: true,
     openPersonalHome: true,
-    openFreshDetail: true
+    openFreshDetail: true,
+    trackEvent: true // 神策统计接口
   },
   geolocation: {
     getCurrentPosition: true
