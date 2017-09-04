@@ -29,7 +29,9 @@ export default {
     startPullRefresh: true,
     togglePullUp: true,
     finishPullUp: true,
-    webviewOnResume: true
+    webviewOnResume: true,
+    setComplexTitlesAndClick: true,
+    showLimitedRightButton: true
   },
   systemAbility: {
     getPasteboard: true,
