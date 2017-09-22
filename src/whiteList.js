@@ -112,6 +112,7 @@ export default {
     openPersonalHomeWithUserId: true,
     openPersonalHome: true,
     openFreshDetail: true,
+    openJobSearch: true,
     trackEvent: true // 神策统计接口
   },
   geolocation: {
