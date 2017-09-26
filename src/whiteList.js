@@ -113,6 +113,7 @@ export default {
     openPersonalHome: true,
     openFreshDetail: true,
     shareToCpdaily: true,
+    openJobSearch: true,
     trackEvent: true // 神策统计接口
   },
   geolocation: {
