@@ -53,7 +53,8 @@ export default {
     share: true
   },
   http: {
-    sendGetRequest: true
+    sendGetRequest: true,
+    sendPostRequest: true
   },
   qrcode: {
     generateCode: true,
