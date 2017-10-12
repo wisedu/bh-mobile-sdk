@@ -31,7 +31,8 @@ export default {
     finishPullUp: true,
     webviewOnResume: true,
     setComplexTitlesAndClick: true,
-    showLimitedRightButton: true
+    showLimitedRightButton: true,
+    cropImage: true
   },
   systemAbility: {
     getPasteboard: true,
