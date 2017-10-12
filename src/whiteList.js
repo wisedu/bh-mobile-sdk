@@ -64,7 +64,8 @@ export default {
   },
   device: {
     getConnectionType: true,
-    registerNetworkChangeCallback: true
+    registerNetworkChangeCallback: true,
+    getInfo: true
   },
   cpdaily: {
     clickHomeTab: true,
