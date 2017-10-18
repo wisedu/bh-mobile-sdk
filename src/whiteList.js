@@ -31,7 +31,8 @@ export default {
     finishPullUp: true,
     webviewOnResume: true,
     setComplexTitlesAndClick: true,
-    showLimitedRightButton: true
+    showLimitedRightButton: true,
+    cropImage: true
   },
   systemAbility: {
     getPasteboard: true,
@@ -64,7 +65,8 @@ export default {
   },
   device: {
     getConnectionType: true,
-    registerNetworkChangeCallback: true
+    registerNetworkChangeCallback: true,
+    getInfo: true
   },
   cpdaily: {
     clickHomeTab: true,
@@ -113,6 +115,7 @@ export default {
     openPersonalHomeWithUserId: true,
     openPersonalHome: true,
     openFreshDetail: true,
+    shareToCpdaily: true,
     openJobSearch: true,
     trackEvent: true // 神策统计接口
   },
