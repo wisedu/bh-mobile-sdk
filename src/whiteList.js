@@ -41,6 +41,7 @@ export default {
     setBrightness: true,
     takeCamera: true,
     takePhoto: true,
+    captureVideo: true,
     tel: true
   },
   file: {
@@ -51,7 +52,8 @@ export default {
     uploadToEMAP: true
   },
   social: {
-    share: true
+    share: true,
+    shareAll: true
   },
   http: {
     sendGetRequest: true,
