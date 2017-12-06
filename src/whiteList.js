@@ -122,6 +122,7 @@ export default {
     trackEvent: true // 神策统计接口
   },
   geolocation: {
+    getCurrentAddress: true,
     getCurrentPosition: true
   }
 }
