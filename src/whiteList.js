@@ -55,6 +55,9 @@ export default {
     share: true,
     shareAll: true
   },
+  map: {
+    showAnnotations: true 
+  },
   http: {
     sendGetRequest: true,
     sendPostRequest: true
