@@ -122,7 +122,8 @@ export default {
     openFreshDetail: true,
     shareToCpdaily: true,
     openJobSearch: true,
-    trackEvent: true // 神策统计接口
+    trackEvent: true, // 神策统计接口
+    saveToPhotoLibrary: true
   },
   geolocation: {
     getCurrentAddress: true,
