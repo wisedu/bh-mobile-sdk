@@ -15,13 +15,21 @@ export let uploadToEMAP = (server, files, config = {}) => {
     if (files.length === 0) {
       reject('没有可供上传的文件')
     }
-    config.params = {
-      scope,
-      fileToken: token,
-      // isSingle: '1',
-      storeId: 'image'
+    let req = {
+      params: Object.assign({}, config, {
+        scope,
+        fileToken: token,
+        // isSingle: '1',
+        storeId: 'image'
+      })
     }
-    BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFileAsAttachment.do', files, config, (result) => {
+
+    if (config.fileName) {
+      req.params.fileName = config.fileName;
+      delete req.fileName;
+    }
+
+    BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFileAsAttachment.do', files, req, (result) => {
       let error = false
       result.forEach((fileResult) => {
         if (fileResult.code !== 200) {
