@@ -1,6 +1,6 @@
 {
   "name": "bh-mobile-sdk",
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "wisedu mobile web sdk",
   "main": "lib/index.js",
   "files": [
