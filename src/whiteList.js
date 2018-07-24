@@ -5,128 +5,129 @@
  */
 
 export default {
-  UI: {
-    actionSheet: true,
-    alertView: true,
-    closeWebView: true,
-    datePicker: true,
-    dateTimePicker: true,
-    multiPicker: true,
-    multiSelect: true,
-    openWebView: true,
-    preViewImages: true,
-    setNavHeader: true,
-    setTitleText: true,
-    setNavBarBgColor: true,
-    setStatusBarTintColor: true,
-    setBouncesEnabled: true,
-    singleSelect: true,
-    showToast: true,
-    toggleLoading: true,
-    toggleNavBar: true,
-    togglePullRefresh: true,
-    finishPullRefresh: true,
-    startPullRefresh: true,
-    togglePullUp: true,
-    finishPullUp: true,
-    webviewOnResume: true,
-    setComplexTitlesAndClick: true,
-    showLimitedRightButton: true,
-    cropImage: true
-  },
-  systemAbility: {
-    getPasteboard: true,
-    setPasteboard: true,
-    setIdleTimerDisabled: true,
-    setBrightness: true,
-    takeCamera: true,
-    takePhoto: true,
-    captureVideo: true,
-    tel: true
-  },
-  file: {
-    filePreview: true,
-    uploadToServer: true,
-  },
-  wisedu: {
-    uploadToEMAP: true
-  },
-  social: {
-    share: true,
-    shareAll: true
-  },
-  map: {
-    showAnnotations: true 
-  },
-  http: {
-    sendGetRequest: true,
-    sendPostRequest: true
-  },
-  qrcode: {
-    generateCode: true,
-    generateCodeAndShow: true,
-    scan: true,
-    recognize: true
-  },
-  device: {
-    getConnectionType: true,
-    registerNetworkChangeCallback: true,
-    getInfo: true
-  },
-  cpdaily: {
-    clickHomeTab: true,
-    checkPublishFresh: true,
-    formatImageToBase64: true,
-    getImagesInfo: true,
-    getTenantID: true,
-    getTenantInfo: true,
-    getUserBasicInfos: true,
-    getUserInfo: true,
-    getCircleList: true,
-    mainAppListChange: true,
-    onMineAppChanged: true,
-    onMainNavTabChanged: true,
-    openApp: true,
-    openCommentView: true,
-    openFullWebView: true,
-    openHomePage: true,
-    openMarketList: true,
-    openUsersPage: true,
-    openPhotoWall: true,
-    onPublishFreshListener: true,
-    parseInfoFromHTML: true,
-    postNotification: true,
-    publishFresh: true,
-    setStatusBarColor: true,
-    showLoginView: true,
-    showMain: true,
-    showOrgSelector: true,
-    showOrHideTabbar: true,
-    showSettingView: true,
-    showUserGuide: true,
-    startComment: true,
-    startIMChat: true,
-    retryFreshSend: true,
-    cancelFreshSend: true,
-    toggleFocus: true,
-    toggleNavTransparent: true,
-    togglePublishBtn: true,
-    uploadToOSS: true,
-    zhugeioTrack: true,
-    jumpToCicleById: true,
-    openCircleById: true,
-    openPublishFreshView: true,
-    openTribeListView: true,
-    openPersonalHomeWithUserId: true,
-    openPersonalHome: true,
-    openFreshDetail: true,
-    shareToCpdaily: true,
-    openJobSearch: true,
-    trackEvent: true, // 神策统计接口
-    saveToPhotoLibrary: true
-  },
-  geolocation: {
-    getCurrentAddress: true,
-    getCurrentPosition: true
-  }
+    UI: {
+        actionSheet: true,
+        alertView: true,
+        closeWebView: true,
+        datePicker: true,
+        dateTimePicker: true,
+        multiPicker: true,
+        multiSelect: true,
+        openWebView: true,
+        preViewImages: true,
+        setNavHeader: true,
+        setTitleText: true,
+        setNavBarBgColor: true,
+        setStatusBarTintColor: true,
+        setBouncesEnabled: true,
+        singleSelect: true,
+        showToast: true,
+        toggleLoading: true,
+        toggleNavBar: true,
+        togglePullRefresh: true,
+        finishPullRefresh: true,
+        startPullRefresh: true,
+        togglePullUp: true,
+        finishPullUp: true,
+        webviewOnResume: true,
+        setComplexTitlesAndClick: true,
+        showLimitedRightButton: true,
+        cropImage: true
+    },
+    systemAbility: {
+        getPasteboard: true,
+        setPasteboard: true,
+        setIdleTimerDisabled: true,
+        setBrightness: true,
+        takeCamera: true,
+        takePhoto: true,
+        captureVideo: true,
+        tel: true
+    },
+    file: {
+        filePreview: true,
+        uploadToServer: true,
+    },
+    wisedu: {
+        uploadToEMAP: true
+    },
+    social: {
+        share: true,
+        shareAll: true
+    },
+    map: {
+        showAnnotations: true
+    },
+    http: {
+        sendGetRequest: true,
+        sendPostRequest: true
+    },
+    qrcode: {
+        generateCode: true,
+        generateCodeAndShow: true,
+        scan: true,
+        recognize: true
+    },
+    device: {
+        getConnectionType: true,
+        registerNetworkChangeCallback: true,
+        getInfo: true
+    },
+    cpdaily: {
+        clickHomeTab: true,
+        checkPublishFresh: true,
+        formatImageToBase64: true,
+        getImagesInfo: true,
+        getTenantID: true,
+        getTenantInfo: true,
+        getUserBasicInfos: true,
+        getUserInfo: true,
+        getCircleList: true,
+        mainAppListChange: true,
+        onMineAppChanged: true,
+        onMainNavTabChanged: true,
+        openApp: true,
+        openCommentView: true,
+        openFullWebView: true,
+        openHomePage: true,
+        openMarketList: true,
+        openUsersPage: true,
+        openPhotoWall: true,
+        onPublishFreshListener: true,
+        parseInfoFromHTML: true,
+        postNotification: true,
+        publishFresh: true,
+        setStatusBarColor: true,
+        showLoginView: true,
+        showMain: true,
+        showOrgSelector: true,
+        showOrHideTabbar: true,
+        showSettingView: true,
+        showUserGuide: true,
+        startComment: true,
+        startIMChat: true,
+        retryFreshSend: true,
+        cancelFreshSend: true,
+        toggleFocus: true,
+        toggleNavTransparent: true,
+        togglePublishBtn: true,
+        uploadToOSS: true,
+        zhugeioTrack: true,
+        jumpToCicleById: true,
+        openCircleById: true,
+        openPublishFreshView: true,
+        openTribeListView: true,
+        openPersonalHomeWithUserId: true,
+        openPersonalHome: true,
+        openFreshDetail: true,
+        shareToCpdaily: true,
+        openJobSearch: true,
+        trackEvent: true, // 神策统计接口
+        saveToPhotoLibrary: true
+    },
+    geolocation: {
+        getCurrentAddress: true,
+        getCurrentPosition: true,
+        checkLocationPermissions: true
+    }
 }
