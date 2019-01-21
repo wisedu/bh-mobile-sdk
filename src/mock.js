@@ -1,4 +1,5 @@
 export let uploadToEMAP = (server, files, config = {}) => {
+  console.log('mobile_sdk_uploadToEMAP',server,files,config)
   let token = config.token
   let scope
   if (token) {
@@ -30,6 +31,7 @@ export let uploadToEMAP = (server, files, config = {}) => {
     }
 
     BH_MOBILE_SDK.file.uploadToServer(server + '/sys/emapcomponent/file/uploadTempFileAsAttachment.do', files, req, (result) => {
+      console.log('mobile_sdk_uploadToServer',result)
       let error = false
       result.forEach((fileResult) => {
         if (fileResult.code !== 200) {
