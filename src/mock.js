@@ -1,3 +1,11 @@
+const S4 = () => {
+  return (((1 + Math.random()) * 0x10000) | 0).toString(32);
+}
+
+const UUID = () => {
+  return (S4() + S4() + S4() + S4() + S4() + S4() + S4() + S4());
+}
+
 export let uploadToEMAP = (server, files, config = {}) => {
   console.log('mobile_sdk_uploadToEMAP',server,files,config)
   let token = config.token
@@ -5,7 +13,8 @@ export let uploadToEMAP = (server, files, config = {}) => {
   if (token) {
     scope = token.substring(0, token.length - 1);
   } else {
-    scope = new Date().getTime() + "" + parseInt(Math.random() * 100).toString()
+    scope = UUID() + '' + parseInt(Math.random() * 100).toString();
+      // new Date().getTime() + "" + parseInt(Math.random() * 100).toString()
     token = scope + 1
   }
 
